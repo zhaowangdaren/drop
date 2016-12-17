@@ -71,9 +71,9 @@ function handleMove(evt){
 	}
 }
 function goHome(){
-	displacement--;
+	displacement -=  4;
 	tagElement.style.marginTop = displacement + originalMarginT + 'px';
-	if(displacement == 0){
+	if(displacement <= 0){
 		clearInterval(backTimer);
 	}
 }
