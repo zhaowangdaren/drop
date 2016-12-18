@@ -49,10 +49,11 @@ function Drop(tagClassStr){
 		if(displacement != 0){
 			self.backTimer = setInterval(function(){
 				displacement -=  4;
-				tagElement.style.marginTop = displacement + originalMarginT + 'px';
 				if(displacement <= 0){
+					displacement = 0;
 					clearInterval(self.backTimer);
 				}
+				tagElement.style.marginTop = displacement + originalMarginT + 'px';
 			}, 1);
 		}
 	}
